@@ -1,0 +1,17 @@
+{
+  "events": [
+    {
+    "dtstart": "20221228T073000Z",
+    "dtend": "20221228T083000Z",
+    "dtstamp": "20221124T132724Z",
+    "uid": "71rocvamst59ea7g4esl0llub8@google.com",
+    "created": "20221124T132046Z",
+    "last-modified": "20221124T132046Z",
+    "location": "",
+    "sequence": 0,
+    "status": "confirmed",
+    "summary": "event1",
+    "transp": "opaque"
+    }
+  ]
+}

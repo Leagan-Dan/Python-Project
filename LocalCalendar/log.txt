@@ -1,0 +1,68 @@
+2022-11-24 22:12:18,337 [Debug] Configured logging
+2022-11-24 22:12:18,341 [Info] started the menu
+2022-11-24 22:12:19,849 [Info] Chose the type of of input
+2022-11-24 22:12:23,819 [Info] Read the events from the given file
+2022-11-24 22:12:25,454 [Info] Chose the type of output
+2022-11-24 22:12:25,455 [Info] Generated alerts
+2022-11-24 22:12:43,463 [Debug] Configured logging
+2022-11-24 22:12:43,466 [Info] started the menu
+2022-11-24 22:12:45,873 [Info] Chose the type of input
+2022-11-24 22:12:48,912 [Info] Read the events from the given file
+2022-11-24 22:12:49,951 [Info] Chose the type of output
+2022-11-24 22:12:55,123 [Info] Generated alerts
+2022-11-24 22:13:05,153 [Debug] Configured logging
+2022-11-24 22:13:05,156 [Info] started the menu
+2022-11-24 22:13:06,802 [Info] Chose the type of input
+2022-11-24 22:13:07,440 [Error] Couldn't read the ICS from the path given
+2022-11-24 22:13:47,131 [Debug] Configured logging
+2022-11-24 22:13:47,135 [Info] started the menu
+2022-11-24 22:13:51,678 [Info] Chose the type of input
+2022-11-24 22:13:56,545 [Error] Couldn't read the JSON from the path given
+2022-11-24 22:14:38,458 [Debug] Configured logging
+2022-11-24 22:14:38,462 [Info] started the menu
+2022-11-24 22:14:45,950 [Info] Chose the type of input
+2022-11-24 22:15:16,447 [Error] Couldn't read the JSON from the given path
+2022-11-24 22:15:19,962 [Debug] Configured logging
+2022-11-24 22:15:19,966 [Info] started the menu
+2022-11-24 22:15:21,120 [Info] Chose the type of input
+2022-11-24 22:15:21,120 [Error] Choose 1 or 2 for ICS or JSON
+2022-11-24 22:15:22,969 [Debug] Configured logging
+2022-11-24 22:15:22,972 [Info] started the menu
+2022-11-24 22:15:24,381 [Info] Chose the type of input
+2022-11-24 22:15:27,897 [Debug] Configured logging
+2022-11-24 22:15:27,900 [Info] started the menu
+2022-11-24 22:15:30,037 [Info] Chose the type of input
+2022-11-24 22:15:34,996 [Info] Read the events from the given file
+2022-11-24 22:15:38,630 [Info] Chose the type of output
+2022-11-24 22:15:38,630 [Error] Choose 1 or 2 for Screen or File
+2022-11-24 22:15:42,163 [Debug] Configured logging
+2022-11-24 22:15:42,167 [Info] started the menu
+2022-11-24 22:15:44,432 [Info] Chose the type of input
+2022-11-24 22:15:46,245 [Info] Read the events from the given file
+2022-11-24 22:15:50,093 [Info] Chose the type of output
+2022-11-24 22:15:51,985 [Error] Couldn't generate file at the given path
+2022-11-24 22:17:04,154 [Debug] Configured logging
+2022-11-24 22:17:04,157 [Info] started the menu
+2022-11-24 22:17:07,691 [Info] Chose the type of input
+2022-11-24 22:17:10,885 [Error] Decoding JSON has failed
+2022-11-24 22:17:42,938 [Debug] Configured logging
+2022-11-24 22:17:42,942 [Info] started the menu
+2022-11-24 22:17:46,094 [Info] Chose the type of input
+2022-11-24 22:17:47,146 [Error] JSON-decoding has failed
+2022-11-24 22:24:10,888 [Debug] Configured logging
+2022-11-24 22:24:10,892 [Info] started the menu
+2022-11-24 22:24:13,859 [Info] Chose the type of input
+2022-11-24 22:24:19,989 [Info] Read the events from the given file
+2022-11-24 22:24:20,890 [Info] Chose the type of output
+2022-11-24 22:24:20,891 [Info] Generated alerts
+2022-11-24 22:24:24,579 [Debug] Configured logging
+2022-11-24 22:24:24,583 [Info] started the menu
+2022-11-24 22:24:25,963 [Info] Chose the type of input
+2022-11-24 22:24:29,144 [Error] Couldn't read the ICS from the given path
+2022-11-24 22:24:30,774 [Debug] Configured logging
+2022-11-24 22:24:30,778 [Info] started the menu
+2022-11-24 22:24:38,463 [Info] Chose the type of input
+2022-11-24 22:24:50,635 [Debug] Configured logging
+2022-11-24 22:24:50,639 [Info] started the menu
+2022-11-24 22:24:54,337 [Info] Chose the type of input
+2022-11-24 22:24:59,527 [Error] JSON-decoding has failed
