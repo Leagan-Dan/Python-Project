@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 from datetime import datetime
 
 from icalendar import Calendar
@@ -23,13 +24,27 @@ def import_configs():
 
 
 def is_valid(event, config):
-    print(event)
-    print(config)
+    alert_dict={}
     for config_property in config.keys():
-        if config_property == "location" and config[config_property] != event[config_property]:
+        if config_property == "location" and config[config_property] != event[config_property].lower():
             return False
-        if config_property == "status" and config[config_property] != event[config_property]:
+        if config_property == "status" and config[config_property] != event[config_property].lower():
             return False
+        if config_property == "contains" and config[config_property] not in event["summary"]:
+            return False
+        if config_property == "alert(d,h,min,sec)":
+            split_time = config[config_property].split(',')
+            for time_measure in split_time:
+                number = re.findall(r'\d+', time_measure)
+                if 'd' in time_measure:
+                    alert_dict['d']=number[0]
+                elif 'h' in time_measure:
+                    alert_dict['h']=number[0]
+                elif 'min' in time_measure:
+                    alert_dict['min']=number[0]
+                elif 'sec' in time_measure:
+                    alert_dict['sec']=number[0]
+            print(alert_dict)
 
     return True
 
@@ -97,7 +112,7 @@ def read_ics(path):
             event_information["dtend"] = component.get('dtend').dt.strftime("%d-%m-%y %H:%M:%S")
             event_information["dtstamp"] = component.get('dtstamp').dt.strftime("%d-%m-%y %H:%M:%S")
             event_information["location"] = str(component.get('location'))
-            event_information["status"] = str(component.get('status'))
+            event_information["status"] = str(component.get('status')).lower()
             events.append(event_information)
     g.close()
     return events

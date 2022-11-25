@@ -130,3 +130,105 @@
 2022-11-25 09:41:55,379 [Info] Read the events from the given file
 2022-11-25 09:41:55,837 [Info] Chose the type of output
 2022-11-25 09:41:55,838 [Info] Generated alerts
+2022-11-25 14:33:34,662 [Debug] Configured logging
+2022-11-25 14:33:34,682 [Info] started the menu
+2022-11-25 14:33:38,722 [Info] Chose the type of input
+2022-11-25 14:33:39,526 [Info] Read the events from the given file
+2022-11-25 14:33:40,261 [Info] Chose the type of output
+2022-11-25 14:33:40,261 [Info] Generated alerts
+2022-11-25 14:34:27,327 [Debug] Configured logging
+2022-11-25 14:34:27,333 [Info] started the menu
+2022-11-25 14:34:28,681 [Info] Chose the type of input
+2022-11-25 14:34:32,764 [Info] Read the events from the given file
+2022-11-25 14:34:33,436 [Info] Chose the type of output
+2022-11-25 14:34:33,436 [Info] Generated alerts
+2022-11-25 14:34:48,640 [Debug] Configured logging
+2022-11-25 14:34:48,645 [Info] started the menu
+2022-11-25 14:34:49,506 [Info] Chose the type of input
+2022-11-25 14:34:50,390 [Info] Read the events from the given file
+2022-11-25 14:34:50,866 [Info] Chose the type of output
+2022-11-25 14:34:50,867 [Info] Generated alerts
+2022-11-25 14:35:44,507 [Debug] Configured logging
+2022-11-25 14:35:44,513 [Info] started the menu
+2022-11-25 14:35:45,245 [Info] Chose the type of input
+2022-11-25 14:35:46,193 [Info] Read the events from the given file
+2022-11-25 14:35:46,724 [Info] Chose the type of output
+2022-11-25 14:35:46,726 [Info] Generated alerts
+2022-11-25 14:37:28,203 [Debug] Configured logging
+2022-11-25 14:37:28,209 [Info] started the menu
+2022-11-25 14:37:29,369 [Info] Chose the type of input
+2022-11-25 14:37:30,804 [Info] Read the events from the given file
+2022-11-25 14:37:37,630 [Info] Chose the type of output
+2022-11-25 14:37:37,631 [Info] Generated alerts
+2022-11-25 14:37:39,599 [Debug] Configured logging
+2022-11-25 14:37:39,604 [Info] started the menu
+2022-11-25 14:37:41,072 [Info] Chose the type of input
+2022-11-25 14:37:43,411 [Error] JSON-decoding has failed
+2022-11-25 14:37:45,652 [Debug] Configured logging
+2022-11-25 14:37:45,657 [Info] started the menu
+2022-11-25 14:37:46,437 [Info] Chose the type of input
+2022-11-25 14:37:50,953 [Info] Read the events from the given file
+2022-11-25 14:37:52,061 [Info] Chose the type of output
+2022-11-25 14:37:52,062 [Info] Generated alerts
+2022-11-25 14:37:55,773 [Debug] Configured logging
+2022-11-25 14:37:55,778 [Info] started the menu
+2022-11-25 14:37:57,383 [Info] Chose the type of input
+2022-11-25 14:38:05,241 [Info] Read the events from the given file
+2022-11-25 14:38:05,943 [Info] Chose the type of output
+2022-11-25 14:38:09,363 [Info] Generated alerts
+2022-11-25 14:42:17,377 [Debug] Configured logging
+2022-11-25 14:42:17,394 [Info] started the menu
+2022-11-25 14:42:19,348 [Info] Chose the type of input
+2022-11-25 14:42:22,224 [Error] Couldn't read the ICS from the given path
+2022-11-25 14:45:03,393 [Debug] Configured logging
+2022-11-25 14:45:03,402 [Info] started the menu
+2022-11-25 14:45:04,992 [Info] Chose the type of input
+2022-11-25 14:45:10,933 [Info] Read the events from the given file
+2022-11-25 14:45:12,098 [Info] Chose the type of output
+2022-11-25 14:45:12,099 [Info] Generated alerts
+2022-11-25 14:45:20,200 [Debug] Configured logging
+2022-11-25 14:45:20,206 [Info] started the menu
+2022-11-25 14:45:21,261 [Info] Chose the type of input
+2022-11-25 14:45:22,135 [Info] Read the events from the given file
+2022-11-25 14:45:22,854 [Info] Chose the type of output
+2022-11-25 14:45:22,855 [Info] Generated alerts
+2022-11-25 14:49:28,695 [Debug] Configured logging
+2022-11-25 14:49:28,700 [Info] started the menu
+2022-11-25 14:49:29,934 [Info] Chose the type of input
+2022-11-25 14:49:32,034 [Info] Read the events from the given file
+2022-11-25 14:49:32,692 [Info] Chose the type of output
+2022-11-25 14:49:32,693 [Info] Generated alerts
+2022-11-25 14:50:03,551 [Debug] Configured logging
+2022-11-25 14:50:03,556 [Info] started the menu
+2022-11-25 14:50:05,170 [Info] Chose the type of input
+2022-11-25 14:50:05,953 [Info] Read the events from the given file
+2022-11-25 14:50:06,627 [Info] Chose the type of output
+2022-11-25 14:50:06,628 [Info] Generated alerts
+2022-11-25 14:53:59,133 [Debug] Configured logging
+2022-11-25 14:53:59,138 [Info] started the menu
+2022-11-25 14:54:00,270 [Info] Chose the type of input
+2022-11-25 14:54:08,769 [Info] Read the events from the given file
+2022-11-25 14:54:09,326 [Info] Chose the type of output
+2022-11-25 14:54:25,683 [Debug] Configured logging
+2022-11-25 14:54:25,688 [Info] started the menu
+2022-11-25 14:54:26,677 [Info] Chose the type of input
+2022-11-25 14:54:27,341 [Info] Read the events from the given file
+2022-11-25 14:54:27,851 [Info] Chose the type of output
+2022-11-25 14:55:11,082 [Debug] Configured logging
+2022-11-25 14:55:11,087 [Info] started the menu
+2022-11-25 14:55:16,889 [Info] Chose the type of input
+2022-11-25 14:55:18,081 [Info] Read the events from the given file
+2022-11-25 14:55:18,634 [Info] Chose the type of output
+2022-11-25 14:55:18,635 [Info] Generated alerts
+2022-11-25 14:58:08,847 [Debug] Configured logging
+2022-11-25 14:58:08,852 [Info] started the menu
+2022-11-25 14:58:09,996 [Info] Chose the type of input
+2022-11-25 14:58:25,874 [Info] Read the events from the given file
+2022-11-25 14:58:26,643 [Info] Chose the type of output
+2022-11-25 14:58:26,644 [Info] Generated alerts
+2022-11-25 14:58:45,552 [Debug] Configured logging
+2022-11-25 14:58:45,557 [Info] started the menu
+2022-11-25 14:58:46,465 [Info] Chose the type of input
+2022-11-25 14:58:47,534 [Info] Read the events from the given file
+2022-11-25 14:58:47,896 [Info] Chose the type of output
+2022-11-25 14:58:47,897 [Info] Generated alerts
