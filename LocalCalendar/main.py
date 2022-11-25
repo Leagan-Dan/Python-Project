@@ -10,7 +10,26 @@ def configure_log():
                         format="%(asctime)s %(message)s")
 
 
+def import_configs():
+    configs = {}
+    with open("Config.txt") as file:
+        lines = [line.rstrip() for line in file]
+    for line in lines:
+        word = line.split(":")
+        if word[0] != "":
+            configs[word[0]] = word[1]
+
+    return configs
+
+
+def is_valid(event, config):
+    print(event)
+    print(config)
+    return True
+
+
 def menu():
+    configs = import_configs()
     logging.info("[Info] started the menu")
     print("Choose the type of file you want to use: (ICS/JSON) [1/2]:")
     choice_input = input()
@@ -42,12 +61,12 @@ def menu():
     choice_output = input()
     logging.info("[Info] Chose the type of output")
     if choice_output == "1":
-        generate_alerts_screen(events)
+        generate_alerts_screen(events, configs)
     elif choice_output == "2":
         print("Enter the directory path to the new file:")
         path = input()
         try:
-            generate_alerts_file(events, path)
+            generate_alerts_file(events, path, configs)
             print("Created Alerts.txt")
         except OSError:
             error = OSError("[Error] Couldn't generate file at the given path")
@@ -111,43 +130,47 @@ def read_json(path):
     return events
 
 
-def generate_alerts_screen(events):
+def generate_alerts_screen(events, configs):
     for event in events:
-        if datetime.strptime(event["dtstart"], "%d-%m-%y %H:%M:%S") > datetime.now():
-            print()
-            print("EVENT ALERT")
-            for key in event.keys():
-                if event[key]:
-                    if key == "summary":
-                        print(f"Summary is: {event[key]}")
-                    elif key == "dtstart":
-                        print(f"Start time is : {event[key]}")
-                    elif key == "dtend":
-                        print(f"End time is: {event[key]}")
-                    elif key == "dtstamp":
-                        print(f"Time stamp is: {event[key]}")
-                    elif key == "location":
-                        print(f"Location is: {event[key]}")
+        if is_valid(event, configs):
+            if datetime.strptime(event["dtstart"], "%d-%m-%y %H:%M:%S") > datetime.now():
+                print()
+                print("EVENT ALERT")
+                for key in event.keys():
+                    if event[key]:
+                        if key == "summary":
+                            print(f"Summary is: {event[key]}")
+                        elif key == "dtstart":
+                            print(f"Start time is : {event[key]}")
+                        elif key == "dtend":
+                            print(f"End time is: {event[key]}")
+                        elif key == "dtstamp":
+                            print(f"Time stamp is: {event[key]}")
+                        elif key == "location":
+                            print(f"Location is: {event[key]}")
 
-def generate_alerts_file(events, path):
+
+def generate_alerts_file(events, path, configs):
     f = open(path + "\\Alerts.txt", "w")
     for event in events:
-        if datetime.strptime(event["dtstart"], "%d-%m-%y %H:%M:%S") > datetime.now():
-            f.write("EVENT ALERT\n")
-            for key in event.keys():
-                if event[key]:
-                    if key == "summary":
-                        f.write(f"Summary is: {event[key]}")
-                    elif key == "dtstart":
-                        f.write(f"Start time is : {event[key]}")
-                    elif key == "dtend":
-                        f.write(f"End time is: {event[key]}")
-                    elif key == "dtstamp":
-                        f.write(f"Time stamp is: {event[key]}")
-                    elif key == "location":
-                        f.write(f"Location is: {event[key]}")
-                f.write("\n")
+        if is_valid(event):
+            if datetime.strptime(event["dtstart"], "%d-%m-%y %H:%M:%S") > datetime.now():
+                f.write("EVENT ALERT\n")
+                for key in event.keys():
+                    if event[key]:
+                        if key == "summary":
+                            f.write(f"Summary is: {event[key]}")
+                        elif key == "dtstart":
+                            f.write(f"Start time is : {event[key]}")
+                        elif key == "dtend":
+                            f.write(f"End time is: {event[key]}")
+                        elif key == "dtstamp":
+                            f.write(f"Time stamp is: {event[key]}")
+                        elif key == "location":
+                            f.write(f"Location is: {event[key]}")
+                    f.write("\n")
     f.close()
+
 
 if __name__ == '__main__':
     configure_log()
