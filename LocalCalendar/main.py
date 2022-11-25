@@ -200,6 +200,4 @@ def generate_alerts_file(events, path, configs):
 if __name__ == '__main__':
     configure_log()
     logging.debug("[Debug] Configured logging")
-    print(read_ics('D:\git\Python\LocalCalendar\leaganndanut@gmail.com.ics'))
-    print(read_json('D:\git\Python\LocalCalendar\calendar.json'))
     menu()
