@@ -25,6 +25,12 @@ def import_configs():
 def is_valid(event, config):
     print(event)
     print(config)
+    for config_property in config.keys():
+        if config_property == "location" and config[config_property] != event[config_property]:
+            return False
+        if config_property == "status" and config[config_property] != event[config_property]:
+            return False
+
     return True
 
 
@@ -91,6 +97,7 @@ def read_ics(path):
             event_information["dtend"] = component.get('dtend').dt.strftime("%d-%m-%y %H:%M:%S")
             event_information["dtstamp"] = component.get('dtstamp').dt.strftime("%d-%m-%y %H:%M:%S")
             event_information["location"] = str(component.get('location'))
+            event_information["status"] = str(component.get('status'))
             events.append(event_information)
     g.close()
     return events
@@ -105,15 +112,17 @@ def read_json(path):
         logging.error(error)
         raise error
 
-    event_information = {}
+
     events = []
 
     for element in data["events"]:
+        event_information = {}
         summary = element['summary']
         dtstart_str = element['dtstart']
         dtend_str = element['dtend']
         dtstamp_str = element['dtstamp']
         location = element['location']
+        status = element['status']
 
         dtstart = datetime.strptime(dtstart_str, "%Y%m%dT%H%M%SZ").strftime("%d-%m-%y %H:%M:%S")
         dtend = datetime.strptime(dtend_str, "%Y%m%dT%H%M%SZ").strftime("%d-%m-%y %H:%M:%S")
@@ -124,6 +133,7 @@ def read_json(path):
         event_information["dtend"] = dtend
         event_information["dtstamp"] = dtstamp
         event_information["location"] = location
+        event_information["status"] = status
 
         events.append(event_information)
     f.close()
@@ -153,7 +163,7 @@ def generate_alerts_screen(events, configs):
 def generate_alerts_file(events, path, configs):
     f = open(path + "\\Alerts.txt", "w")
     for event in events:
-        if is_valid(event):
+        if is_valid(event,configs):
             if datetime.strptime(event["dtstart"], "%d-%m-%y %H:%M:%S") > datetime.now():
                 f.write("EVENT ALERT\n")
                 for key in event.keys():

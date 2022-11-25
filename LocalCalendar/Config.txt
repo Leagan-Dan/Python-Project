@@ -1,4 +1,4 @@
-Contains:event
-Alert(d,h,min,sec):30min
-Location:
+contains:event
+alert(d,h,min,sec):30min
+location:
 status:confirmed
