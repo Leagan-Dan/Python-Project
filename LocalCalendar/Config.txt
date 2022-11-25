@@ -1,4 +1,4 @@
 contains:event
-alert(d,h,min,sec):30min
+alert(d,h,min,sec):4d,2h,30min,10sec
 location:
 status:confirmed

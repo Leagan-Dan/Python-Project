@@ -1,7 +1,7 @@
 import json
 import logging
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from icalendar import Calendar
 
@@ -24,7 +24,6 @@ def import_configs():
 
 
 def is_valid(event, config):
-    alert_dict={}
     for config_property in config.keys():
         if config_property == "location" and config[config_property] != event[config_property].lower():
             return False
@@ -34,17 +33,19 @@ def is_valid(event, config):
             return False
         if config_property == "alert(d,h,min,sec)":
             split_time = config[config_property].split(',')
+            check_time = datetime.now()
             for time_measure in split_time:
                 number = re.findall(r'\d+', time_measure)
                 if 'd' in time_measure:
-                    alert_dict['d']=number[0]
+                    check_time = check_time + timedelta(days=int(number[0]))
                 elif 'h' in time_measure:
-                    alert_dict['h']=number[0]
+                    check_time = check_time + timedelta(hours=int(number[0]))
                 elif 'min' in time_measure:
-                    alert_dict['min']=number[0]
+                    check_time = check_time + timedelta(minutes=int(number[0]))
                 elif 'sec' in time_measure:
-                    alert_dict['sec']=number[0]
-            print(alert_dict)
+                    check_time = check_time + timedelta(seconds=int(number[0]))
+            if check_time < datetime.strptime(event['dtstart'],"%d-%m-%y %H:%M:%S"):
+                return False
 
     return True
 
@@ -127,7 +128,6 @@ def read_json(path):
         logging.error(error)
         raise error
 
-
     events = []
 
     for element in data["events"]:
@@ -178,7 +178,7 @@ def generate_alerts_screen(events, configs):
 def generate_alerts_file(events, path, configs):
     f = open(path + "\\Alerts.txt", "w")
     for event in events:
-        if is_valid(event,configs):
+        if is_valid(event, configs):
             if datetime.strptime(event["dtstart"], "%d-%m-%y %H:%M:%S") > datetime.now():
                 f.write("EVENT ALERT\n")
                 for key in event.keys():
